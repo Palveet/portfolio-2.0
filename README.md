@@ -1,6 +1,6 @@
 # Portfolio 2.0
 
-A modern, animated portfolio website inspired by the Fluke design template. Built with Next.js 14, TypeScript, Tailwind CSS, and GSAP animations.
+A modern, animated portfolio website. Built with Next.js 14, TypeScript, Tailwind CSS, and GSAP animations.
 
 ## Features
 
