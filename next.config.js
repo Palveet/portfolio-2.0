@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
+  basePath: '/portfolio-2.0',
   images: {
-    domains: [],
+    unoptimized: true,
   },
+  reactStrictMode: true,
 }
 
 module.exports = nextConfig
