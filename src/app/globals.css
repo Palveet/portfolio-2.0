@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+:root {
+  --color-background: #F5F5F5;
+  --color-foreground: #000000;
+  --color-accent: #E63946;
+}
+
+.dark {
+  --color-background: #000000;
+  --color-foreground: #F5F5F5;
+}
+
+/* Ensure content is always visible - animations are enhancement only */
+section,
+section > *,
+section > * > * {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
