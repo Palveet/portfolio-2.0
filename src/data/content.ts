@@ -50,7 +50,7 @@ export const experience = [
       "Revamped Faith, a Swift and Python-powered iOS application available on the App Store, designed to help users deepen their religious and spiritual practices.",
       "Led end-to-end iOS development, including app architecture, UI/UX implementation with UIKit, API integration, and App Store deployment.",
       "11k active monthly users, contributing significantly to business growth and sustainability.",
-      "Built React components for Flik AI's content generation tool & landing page. State management using Zustand.",
+      "Built React components for Flik AI's content generation tool & landing page. State management using Zustand. Also, shipped a desktop application by extending a React web app using Electron.",
       "Structured the frontend in a Turborepo, enabling shared components & faster builds.",
       "Engineered backend services using FastAPI (python) and Postgres for database. Integrated WebSocket-based communication for real-time, bi-directional frontend-backend sync.",
       "Built secure authentication and session flow using Auth0.",
