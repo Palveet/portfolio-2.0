@@ -6,6 +6,7 @@ import { aboutServices } from '@/data/content'
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
+  const cardsContainerRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<(HTMLDivElement | null)[]>([])
   const [mounted, setMounted] = useState(false)
 
@@ -32,16 +33,15 @@ export default function About() {
           }
 
           const validCards = cardsRef.current.filter((card) => card !== null)
-          if (validCards.length > 0) {
+          if (validCards.length > 0 && cardsContainerRef.current) {
             gsap.set(validCards, { opacity: 1 })
             gsap.from(validCards, {
               y: 60,
               duration: 1.4,
-              stagger: 0.2,
               ease: 'cubic-bezier(0.65, 0, 0.35, 1)',
               scrollTrigger: {
-                trigger: validCards[0],
-                start: 'top 80%',
+                trigger: cardsContainerRef.current,
+                start: 'top 70%',
                 toggleActions: 'play none none none',
               },
             })
@@ -67,7 +67,7 @@ export default function About() {
           Expertise
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div ref={cardsContainerRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {aboutServices.map((service, index) => (
             <div
               key={service.id}
