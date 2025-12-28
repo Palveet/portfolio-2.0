@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { projects } from '@/data/content'
+import { getImagePath } from '@/lib/utils'
 import flik from '../../public/images/flik.png'
 export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -76,7 +77,7 @@ export default function Projects() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className={index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}>
                   <div className="relative bg-background rounded-2xl overflow-hidden group-hover:shadow-2xl transition-shadow duration-500">
-                    <img src={project.image} alt={project.title} className="w-full h-auto"/>
+                    <img src={getImagePath(project.image)} alt={project.title} className="w-full h-auto"/>
                   </div>
                 </div>
 
