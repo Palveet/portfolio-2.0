@@ -43,7 +43,7 @@ export const experience = [
   {
     id: 1,
     company: "Terrasoft Inc",
-    position: "Software Engineer",
+    position: "Founding Software Engineer",
     location: "Remote",
     period: "May 2025 - Present",
     achievements: [
